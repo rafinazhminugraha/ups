@@ -50,31 +50,30 @@ def loginPage():
                 print(Style.RESET_ALL)
                 lanjutkan = input("Tekan Enter Untuk Melanjutkan")
                 print()
-                berhasil_login = True
-                return berhasil_login
+                return True
 
-        if not berhasil_login:
-            print(f"{Fore.RED}Gagal Login")
+            # if not berhasil_login:
+            #     print(f"{Fore.RED}Gagal Login")
+            #     print(Style.RESET_ALL)
+        else:
+            print(f"{Fore.RED}Login gagal")
             print(Style.RESET_ALL)
-        # else:
-        #     print(f"{Fore.RED}Login gagal")
-        #     print(Style.RESET_ALL)
-        #     while True:
-        #         print("1. Login ulang")
-        #         print("2. Register")
-        #         print("3. Kembali ke welcome page")
-        #         print()
-        #         pilihan_user = input("> ")
-        #         if pilihan_user == "1":
-        #             break
-        #         elif pilihan_user == "2":
-        #             registerPage()
-        #             return False
-        #         elif pilihan_user == "3":
-        #             return False
-        #         else:
-        #             print(f"{Fore.RED}Inputan tidak valid")
-        #             print(Style.RESET_ALL)
+            while True:
+                print("1. Login ulang")
+                print("2. Register")
+                print("3. Kembali ke welcome page")
+                print()
+                pilihan_user = input("> ")
+                if pilihan_user == "1":
+                    break
+                elif pilihan_user == "2":
+                    registerPage()
+                    return False
+                elif pilihan_user == "3":
+                    return False
+                else:
+                    print(f"{Fore.RED}Inputan tidak valid")
+                    print(Style.RESET_ALL)
                     
 
 def registerPage():
