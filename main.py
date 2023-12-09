@@ -436,7 +436,6 @@ def menuUtama():
             print(f"{Fore.RED}Inputan tidak valid")
             print(Style.RESET_ALL)
 
-        
 while True:
     if not status_login:
         welcomePage()
